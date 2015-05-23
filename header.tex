@@ -1,0 +1,41 @@
+\documentclass[table]{beamer}
+\mode<presentation>
+{
+  \usetheme{Berkeley}
+}
+
+% 设定英文字体
+\usepackage{fontspec}
+\setmainfont{Arial}
+%\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+
+% 设定中文字体
+\usepackage[BoldFont,SlantFont,CJKchecksingle,CJKnumber]{xeCJK}
+\setCJKmainfont[BoldFont={Adobe Heiti Std},ItalicFont={Adobe Kaiti Std}]{Adobe Song Std}
+
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{colortbl,xcolor}
+\usepackage{hyperref}
+
+% 插入图片
+\usepackage{graphicx}
+% 指定存储图片的路径（当前目录下的figures文件夹）
+\graphicspath{{figures/}}
+
+% 可能用到的包
+\usepackage{amsmath,amssymb}
+\usepackage{multimedia}
+\usepackage{multicol}
+
+% item逐步显示时,使已经出现的item、正在显示的item、将要出现的item呈现不同颜色
+\def\hilite<#1>{
+ \temporal<#1>{\color{gray}}{\color{blue}}
+    {\color{blue!25}}
+}
+
+% 在表格、图片等得标题中显示编号
+\setbeamertemplate{caption}[numbered]
+
